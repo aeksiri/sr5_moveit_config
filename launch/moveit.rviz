@@ -1,12 +1,13 @@
 Panels:
   - Class: rviz/Displays
-    Help Height: 84
+    Help Height: 0
     Name: Displays
     Property Tree Widget:
       Expanded:
         - /MotionPlanning1
+        - /MotionPlanning1/Planned Path1
       Splitter Ratio: 0.742560029
-    Tree Height: 620
+    Tree Height: 393
   - Class: rviz/Help
     Name: Help
   - Class: rviz/Views
@@ -14,6 +15,11 @@ Panels:
       - /Current View1
     Name: Views
     Splitter Ratio: 0.5
+  - Class: rviz_visual_tools/RvizVisualToolsGui
+    Name: RvizVisualToolsGui
+  - Class: moveit_cartesian_plan_plugin/MoveIt Cartesian Plan Plug-in
+    Name: MoveIt Cartesian Plan Plug-in
+    TextEntry: test_field
 Toolbars:
   toolButtonStyle: 2
 Visualization Manager:
@@ -70,10 +76,6 @@ Visualization Manager:
           Expand Link Details: false
           Expand Tree: false
           Link Tree Style: Links in Alphabetic Order
-          base_footprint:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
           base_link:
             Alpha: 1
             Show Axes: false
@@ -119,6 +121,11 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
+          link7:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
           right_finger_link:
             Alpha: 1
             Show Axes: false
@@ -133,7 +140,7 @@ Visualization Manager:
         Robot Color: 150; 50; 150
         Show Robot Collision: false
         Show Robot Visual: true
-        Show Trail: false
+        Show Trail: true
         State Display Time: 0.05 s
         Trail Step Size: 1
         Trajectory Topic: move_group/display_planned_path
@@ -173,10 +180,6 @@ Visualization Manager:
           Expand Link Details: false
           Expand Tree: false
           Link Tree Style: Links in Alphabetic Order
-          base_footprint:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
           base_link:
             Alpha: 1
             Show Axes: false
@@ -222,6 +225,11 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
+          link7:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
           right_finger_link:
             Alpha: 1
             Show Axes: false
@@ -236,6 +244,15 @@ Visualization Manager:
         Show Robot Visual: true
       Value: true
       Velocity_Scaling_Factor: 1
+    - Class: rviz/InteractiveMarkers
+      Enable Transparency: true
+      Enabled: true
+      Name: InteractiveMarkers
+      Show Axes: false
+      Show Descriptions: true
+      Show Visual Aids: false
+      Update Topic: /moveit_cartesian_plan_plugin/update
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -244,49 +261,53 @@ Visualization Manager:
     Frame Rate: 30
   Name: root
   Tools:
-    - Class: rviz/Interact
-      Hide Inactive Objects: true
     - Class: rviz/MoveCamera
     - Class: rviz/Select
+    - Class: rviz/Interact
+      Hide Inactive Objects: true
   Value: true
   Views:
     Current:
       Class: rviz/XYOrbit
-      Distance: 2.48828268
+      Distance: 2.7157352
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.125512183
-        Y: -0.0678670555
-        Z: -1.34109882e-07
+        X: 0.092718251
+        Y: -0.114288524
+        Z: -2.53319172e-07
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.454795957
+      Pitch: 0.529796004
       Target Frame: base_link
       Value: XYOrbit (rviz)
-      Yaw: 5.60994101
+      Yaw: 5.47494888
     Saved: ~
 Window Geometry:
   Displays:
     collapsed: false
-  Height: 1388
+  Height: 1028
   Help:
     collapsed: false
   Hide Left Dock: false
-  Hide Right Dock: true
+  Hide Right Dock: false
   MotionPlanning:
     collapsed: false
   MotionPlanning - Trajectory Slider:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd00000001000000000000031b0000051dfc0200000007fb000000100044006900730070006c006100790073010000002e00000307000000dd00fffffffb0000000800480065006c00700000000342000000bb0000007900fffffffb0000000a0056006900650077007300000003b0000000b0000000b700fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e00670100000374000001890000000000000000fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000005000fffffffb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e0067010000033c0000020f000001b100ffffff000002d20000051d00000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  MoveIt Cartesian Plan Plug-in:
+    collapsed: false
+  QMainWindow State: 000000ff00000000fd00000001000000000000031b000003b5fc0200000008fc0000002e000001d0000000dd00fffffffa000000010100000002fb0000003a004d006f0076006500490074002000430061007200740065007300690061006e00200050006c0061006e00200050006c00750067002d0069006e0200000030000000b7000003f000000331fb000000100044006900730070006c00610079007301000000000000031b0000017900fffffffb0000000800480065006c00700000000342000000bb0000007900fffffffb0000000a0056006900650077007300000003b0000000b0000000b700fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e00670100000374000001890000000000000000fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c0069006400650072000000013a000000500000005000fffffffc00000205000001de000001d201000020fa000000000100000002fb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e00670100000000ffffffff0000031b00fffffffb00000024005200760069007a00560069007300750061006c0054006f006f006c007300470075006901000000000000031b0000018700fffffffb000000280020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000000000000000000001ce000003b500000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  RvizVisualToolsGui:
+    collapsed: false
   Views:
     collapsed: false
-  Width: 1524
-  X: 65
+  Width: 1264
+  X: 75
   Y: 24
